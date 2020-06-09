@@ -35,7 +35,10 @@
                                     </td>
                                     <td>
                                         <a href="">
-                                            <button class="btn btn-outline-danger">Delete</button>
+                                            <form action="{{ route('category.destroy',$category->id) }}" method="POST">@csrf
+                                                {{ method_field('DELETE') }}
+                                                <button class="btn btn-outline-danger">Delete</button>
+                                            </form>
                                         </a>
                                     </td>
                                 </tr>
